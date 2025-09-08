@@ -100,11 +100,11 @@ export default function Regester() {
 
   return (
     <section className='bg-gray min-h-screen flex items-center justify-center mt-5  mb-15'>
-      <div className='w-full'>
+      <div className=''>
         <div className="w-fit mx-auto shadow-xl p-10 rounded-2xl">
           <h1 className='select-none text-[#1d4ed8] text-2xl  text-center font-bold mb-7
         '>Create an Account</h1>
-          <form className="w-sm md:w-2xl mx-auto " onSubmit={handleSubmit(myHandle)}>
+          <form className="md:w-2xl mx-auto " onSubmit={handleSubmit(myHandle)}>
             {/* name */}
             <div className="grid md:grid-cols-2 md:gap-6">
               {/* first name */}
