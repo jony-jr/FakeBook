@@ -7,8 +7,8 @@ export default function UserInfoCard({postsNum=0}) {
 
   return (
     <>
-      <div className="    flex flex-wrap items-center  justify-center mb-10 ">
-        <div className="container rounded-2xl max-w-md  md:max-w-2xl w-full bg-white  shadow-lg    transform   duration-200 easy-in-out">
+      <div className="    flex flex-wrap items-center  justify-center mb-10  ">
+        <div className="w-sm  md:w-2xl container rounded-2xl max-w-md  md:max-w-2xl w-full bg-white  shadow-lg    transform   duration-200 easy-in-out">
           
           <div className="flex justify-center px-5  ">
             <img className="h-32 w-32 bg-white p-2 rounded-full   " src={logedUserPhoto} alt />
