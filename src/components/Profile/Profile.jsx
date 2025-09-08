@@ -34,7 +34,7 @@ export default function Profile() {
     <>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-700">
         <div className=" py-20">
-          <UserInfoCard/>
+          <UserInfoCard postsNum={allUserPosts.length}/>
           <CreatePost/>
           {allUserPosts && allUserPosts.map(post => (<PostCard post={post} key={post.id} />))}
         </div>

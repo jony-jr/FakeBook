@@ -1,17 +1,15 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { jwtDecode } from "jwt-decode";
-import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 export const authContext = createContext()
 export default function AuthContextProvider({ children }) {
   const [token, setToken] = useState(() => localStorage.getItem('tkn'))
-  // const [logedUserId, setLogedUserId] = useState(null)
   const [userData, setUserData] = useState(null)
   const logedUserId = userData?.data.user._id
   const logedUserPhoto = userData?.data.user.photo
   const logedUserName = userData?.data.user.name
   const logedUserEmail = userData?.data.user.email
+  const logedUserdateOfBirth = userData?.data.user.dateOfBirth
   function insertUserToken(userToken) {
     setToken(userToken)
   }
@@ -46,7 +44,7 @@ export default function AuthContextProvider({ children }) {
   
 
   return (
-    <authContext.Provider value={{ token, insertUserToken, clearUserToken , logedUserId ,logedUserEmail,logedUserPhoto,logedUserName }}>
+    <authContext.Provider value={{ token, insertUserToken, clearUserToken , logedUserId ,logedUserEmail,logedUserPhoto,logedUserName,logedUserdateOfBirth }}>
       {children}
     </authContext.Provider>
   )

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import './UserInfoCard.css'
 import { authContext } from '../../Contexts/AuthContextProvider'
-export default function UserInfoCard() {
-  const {logedUserPhoto,logedUserName,logedUserEmail}= useContext(authContext)
+export default function UserInfoCard({postsNum=0}) {
+  const {logedUserPhoto,logedUserName,logedUserEmail,logedUserdateOfBirth}= useContext(authContext)
+  const userAge= new Date().getFullYear() - logedUserdateOfBirth?.split('-').at(-1);
+
   return (
     <>
       <div className="    flex flex-wrap items-center  justify-center mb-10 ">
@@ -14,8 +16,8 @@ export default function UserInfoCard() {
           <div className=" ">
             <div className="text-center px-14">
               <h2 className="text-gray-800 text-3xl font-bold">{logedUserName}</h2>
-              <a className="text-gray-400 mt-2 hover:text-blue-500" href={` mailto:${logedUserEmail} `} target="_blank">{logedUserEmail.split("@").at(0)}</a>
-              <p className="mt-2 text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+              <a className="text-gray-400 mt-2 hover:text-blue-500" href={` mailto:${logedUserEmail} `} target="_blank">{logedUserEmail?.split("@").at(0)}</a>
+              <p className="mt-2 text-gray-500 text-sm">Hello i'm {logedUserName} and i'm {userAge} years old</p>
             </div>
             <hr className="mt-6" />
             <div className="flex  bg-gray-50 ">
@@ -24,7 +26,7 @@ export default function UserInfoCard() {
               </div>
               <div className="border" />
               <div className="text-center w-1/2 p-4 hover:bg-gray-100 cursor-pointer">
-                <p> <span className="font-semibold">2.0 k </span> Posts</p>
+                <p> <span className="font-semibold">{postsNum} </span> Posts</p>
               </div>
             </div>
           </div>
