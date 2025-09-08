@@ -83,7 +83,7 @@ export default function LogIn() {
   //     })
 
   return (
-    <section className='min-h-screen bg-gray flex items-center justify-center  '>
+    <section className='min-h-dvh  bg-gray flex items-center justify-center  '>
       <div className='p-5'>
         <div className="w-fit mx-auto shadow-xl p-10 rounded-2xl">
           <div className=" flex justify-center items-center flex-col gap-3 mb-5">

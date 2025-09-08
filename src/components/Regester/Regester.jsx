@@ -99,7 +99,7 @@ export default function Regester() {
 
 
   return (
-    <section className='bg-gray min-h-screen flex items-center justify-center mt-5  mb-15'>
+    <section className='bg-gray min-h-dvh flex items-center justify-center mt-5  mb-15'>
       <div >
         <div className="w-fit mx-auto shadow-xl p-10 rounded-2xl">
           <h1 className='select-none text-[#1d4ed8] text-3xl  md:text-5xl text-center font-bold mb-7
