@@ -1,0 +1,35 @@
+import React, { useContext } from 'react'
+import './UserInfoCard.css'
+import { authContext } from '../../Contexts/AuthContextProvider'
+export default function UserInfoCard() {
+  const {logedUserPhoto,logedUserName,logedUserEmail}= useContext(authContext)
+  return (
+    <>
+      <div className="    flex flex-wrap items-center  justify-center mb-10 ">
+        <div className="container rounded-2xl max-w-md  md:max-w-2xl w-full bg-white  shadow-lg    transform   duration-200 easy-in-out">
+          
+          <div className="flex justify-center px-5  ">
+            <img className="h-32 w-32 bg-white p-2 rounded-full   " src={logedUserPhoto} alt />
+          </div>
+          <div className=" ">
+            <div className="text-center px-14">
+              <h2 className="text-gray-800 text-3xl font-bold">{logedUserName}</h2>
+              <a className="text-gray-400 mt-2 hover:text-blue-500" href={` mailto:${logedUserEmail} `} target="_blank">{logedUserEmail.split("@").at(0)}</a>
+              <p className="mt-2 text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            </div>
+            <hr className="mt-6" />
+            <div className="flex  bg-gray-50 ">
+              <div className="text-center w-1/2 p-4 hover:bg-gray-100 cursor-pointer">
+                <p><span className="font-semibold">2.5 k </span> Followers</p>
+              </div>
+              <div className="border" />
+              <div className="text-center w-1/2 p-4 hover:bg-gray-100 cursor-pointer">
+                <p> <span className="font-semibold">2.0 k </span> Posts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}

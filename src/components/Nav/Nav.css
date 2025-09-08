@@ -1,0 +1,4 @@
+@plugin "flowbite/plugin";
+.active {
+    color: #2563eb;
+}
