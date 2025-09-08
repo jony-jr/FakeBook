@@ -83,11 +83,11 @@ export default function LogIn() {
   //     })
 
   return (
-    <section className='min-h-screen bg-gray flex items-center justify-center   '>
-      <div className=''>
+    <section className='min-h-screen bg-gray flex items-center justify-center  '>
+      <div className='p-5'>
         <div className="w-fit mx-auto shadow-xl p-10 rounded-2xl">
           <div className=" flex justify-center items-center flex-col gap-3 mb-5">
-            <h1 className='text-[#1d4ed8] text-6xl font-bold select-none font-[quiska] tracking-widest'>fakebook</h1>
+            <h1 className='text-[#1d4ed8] text-5xl md:text-6xl  font-bold select-none font-[quiska] tracking-widest'>fakebook</h1>
             <span className='text-xl select-none'>Login to Fakebook</span>
           </div>
           <form className=" md:w-2xl mx-auto " onSubmit={handleSubmit(myHandle)}>
