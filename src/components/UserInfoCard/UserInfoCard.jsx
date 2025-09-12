@@ -4,7 +4,7 @@ import { authContext } from '../../Contexts/AuthContextProvider'
 export default function UserInfoCard({postsNum=0}) {
   const {logedUserPhoto,logedUserName,logedUserEmail,logedUserdateOfBirth}= useContext(authContext)
   const userAge= new Date().getFullYear() - logedUserdateOfBirth?.split('-').at(-1);
-
+  
   return (
     <>
       <div className="    flex flex-wrap items-center  justify-center mb-10  ">
